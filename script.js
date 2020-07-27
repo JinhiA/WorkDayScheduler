@@ -24,23 +24,17 @@ $(document).ready(function() {
       console.log(blockHour, currentHour);
 
       // check if we've moved past this time
-      
-      // if the current hour is greater than the block hour
       if (currentHour > blockHour){
       // then add class "past"
       $(this).addClass("past");
       $(this).removeClass("future"); 
       $(this).removeClass("present"); 
       }
-      // if they are equal
-      // then remove class "past" and add class "present"
       else if (blockHour === currentHour) {
         $(this).removeClass("past");
         $(this).addClass("present");
         $(this).removeClass("future");
       }
-      // else
-      // remove class "past", remove class "present", add class "future"
       else {
         $(this).removeClass("past");
         $(this).removeClass("present");
