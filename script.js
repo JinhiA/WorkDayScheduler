@@ -1,6 +1,5 @@
 $(document).ready(function() {
   // listen for save button clicks
-
   $(".saveBtn").on("click", function() {
     // get nearby values
     var value = $(this).siblings(".description").val();
@@ -45,7 +44,7 @@ $(document).ready(function() {
       else {
         $(this).removeClass("past");
         $(this).removeClass("present");
-        $(this).removeClass("future");
+        $(this).addClass("future");
       }
     });
   }
@@ -53,28 +52,23 @@ $(document).ready(function() {
   hourUpdater();
 
   // set up interval to check if current time needs to be updated
-  setInterval(hourUpdater (15000));
+  var timeStatus = setInterval(hourUpdater (15000));
   // which means execute hourUpdater function every 15 seconds
 
   // load any saved data from localStorage
-  $('#save').on('click', function(){
+  var allLogs = [];
+  for(var i=0; i<localStorage.length; i++)
+  {
+    allLogs.push(localStorage.key(i));    
+  }
 
-    $('input[type="text"]').each(function(){    
-        var id = $(this).attr('id');
-        var value = $(this).val();
-       localStorage.setItem(time, value);
+  for(var i=0; i<allLogs.length; i++)
+  {
+    var id = allLogs[i];
+    var value = localStorage.getItem(id);
+    $("#" + id + " textarea").val(value);
+  }
 
-    });   
-});
-
-$('#load').on('click', function(){
-    $('input[type="text"]').each(function(){    
-        var id = $(this).attr('id');
-        var value = localStorage.getItem(id);
-
-        $(this).val(value);
-    });
-});
   // display current day on page
   $("#currentDay").text(moment().format("dddd, MMMM Do"));
 });
