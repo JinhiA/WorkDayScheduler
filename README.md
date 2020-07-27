@@ -4,7 +4,7 @@ HW5
 ##Project Summary 
 This project creates an user intuitive day scheduler and allows the user to input and save their tasks. This project includes HTML, CSS, and Javascript. 
 
-[test image] (WorkDayScheduler/images/Image1.png) 
+<img> (WorkDayScheduler/images/Image1.png)
 
 ##Features of Project
 
