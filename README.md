@@ -1,18 +1,18 @@
 # WorkDayScheduler
 HW5
 
-##Project Summary 
+## Project Summary 
 This project creates an user intuitive day scheduler and allows the user to input and save their tasks. This project includes HTML, CSS, and Javascript. 
 
-<img> (WorkDayScheduler/images/Image1.png)
+https://github.com/JinhiA/WorkDayScheduler/issues/1#issue-666625960
 
-##Features of Project
+## Features of Project
 
 * User is able to add and save tasks within a 9 hour day. 
 
 * Interval is set to update every 15 seconds to update the hour so the tasks that are scheduled show in their appropriate colors. Colors are designated for past, present, and future so the user can easily keep up with their tasks. 
 
-##Resources
+## Resources
 *W3schools.com
 *Stackoverflow.com
 *javascript.info
